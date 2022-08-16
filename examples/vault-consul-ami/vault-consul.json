@@ -130,7 +130,7 @@
       "fi"
     ],
     "inline_shebang": "/bin/bash -e",
-    "only": ["ubuntu16-ami","ubuntu18-ami"]
+    "only": ["ubuntu18-ami","ubuntu20-ami"]
   },{
     "type": "shell",
     "inline": [
@@ -154,7 +154,7 @@
     "pause_before": "30s"
   },{
     "type": "shell",
-    "only": ["ubuntu16-ami", "amazon-linux-2-ami"],
+    "only": ["amazon-linux-2-ami"],
     "inline": [
       "/tmp/terraform-aws-consul/modules/install-dnsmasq/install-dnsmasq"
     ]
