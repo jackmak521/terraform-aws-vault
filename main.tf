@@ -33,7 +33,7 @@ data "aws_ami" "vault_consul" {
   most_recent = true
 
   # If we change the AWS Account in which test are run, update this value.
-  owners = ["562637147889"]
+  owners = ["723280554673"]
 
   filter {
     name   = "virtualization-type"
@@ -42,13 +42,9 @@ data "aws_ami" "vault_consul" {
 
   filter {
     name   = "is-public"
-    values = ["true"]
+    values = ["false"]
   }
 
-  filter {
-    name   = "name"
-    values = ["vault-consul-ubuntu-*"]
-  }
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -65,7 +61,7 @@ module "vault_cluster" {
   cluster_size  = var.vault_cluster_size
   instance_type = var.vault_instance_type
 
-  ami_id    = var.ami_id == null ? data.aws_ami.vault_consul.image_id : var.ami_id
+  ami_id    = var.vault_ami_id == null ? data.aws_ami.vault_consul.image_id : var.vault_ami_id
   user_data = data.template_file.user_data_vault_cluster.rendered
 
   vpc_id     = data.aws_vpc.default.id
@@ -182,7 +178,7 @@ module "consul_cluster" {
   cluster_tag_key   = var.consul_cluster_tag_key
   cluster_tag_value = var.consul_cluster_name
 
-  ami_id    = var.ami_id == null ? data.aws_ami.vault_consul.image_id : var.ami_id
+  ami_id    = var.consul_ami_id == null ? data.aws_ami.vault_consul.image_id : var.consul_ami_id
   user_data = data.template_file.user_data_consul.rendered
 
   vpc_id     = data.aws_vpc.default.id
@@ -229,4 +225,3 @@ data "aws_subnet_ids" "default" {
 
 data "aws_region" "current" {
 }
-
