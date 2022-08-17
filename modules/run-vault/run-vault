@@ -322,7 +322,6 @@ $dynamodb_storage_type "dynamodb" {
 # HA settings
 cluster_addr  = "https://$instance_ip_address:$cluster_port"
 api_addr      = "$api_addr"
-license_path  = "/opt/vault"
 EOF
 )
   else
@@ -336,6 +335,7 @@ $consul_storage_type "consul" {
 # HA settings
 cluster_addr  = "https://$instance_ip_address:$cluster_port"
 api_addr      = "$api_addr"
+license_path  = "/opt/vault/vault-trial-license"
 EOF
 )
   fi
