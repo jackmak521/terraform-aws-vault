@@ -1,5 +1,3 @@
-environment_name = "dev2"
-
 consul_instance_type = "t3.micro"
 consul_cluster_name = "test-consul"
 consul_cluster_size = 3
@@ -22,8 +20,3 @@ vpc_tags = {
 }
 
 use_default_vpc = false
-
-
-
-
-
