@@ -1,5 +1,5 @@
 consul_instance_type = "t3.micro"
-consul_cluster_name = "test-consulyyyy"
+consul_cluster_name = "test-consulggg"
 consul_cluster_size = 3
 consul_cluster_tag_key = "consul-servers"
 consul_ami_id = "ami-045aeef67e423a5f7"
