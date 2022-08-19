@@ -1,4 +1,4 @@
-consul_instance_type = "t2.micro"
+consul_instance_type = "t3.micro"
 consul_cluster_name = "test-consul"
 consul_cluster_size = 3
 consul_cluster_tag_key = "consul-servers"
