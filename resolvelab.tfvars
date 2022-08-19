@@ -1,7 +1,7 @@
 consul_instance_type = "t2.micro"
-consul_cluster_name = "test-consulpppppp"
+consul_cluster_name = "test-consul"
 consul_cluster_size = 3
-consul_cluster_tag_key = "consul-servers-rrrrr"
+consul_cluster_tag_key = "consul-servers"
 consul_ami_id = "ami-045aeef67e423a5f7"
 
 vault_instance_type = "t3.micro"
