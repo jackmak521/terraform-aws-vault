@@ -11,12 +11,8 @@ vault_ami_id = "ami-02553d1fde8d88e7c"
 
 ssh_key_name = "welabpoc"
 
-subnet_tags = {
-  vault = "true"
-}
+subnet_id = "subnet-00f1385d5a1b87fe0, subnet-0564116b65af5ca98, subnet-050cc5e7f3fc2e7d7"
 
-vpc_tags = {
-  vault = "true"
-}
+vpc_id = "vpc-013fde103211f6c05"
 
 use_default_vpc = false
