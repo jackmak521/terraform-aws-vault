@@ -107,3 +107,13 @@ variable "consul_cluster_tag_key" {
   type        = string
   default     = "consul-servers"
 }
+
+variable "vpc_id" {
+  description = "The ID of the VPC in which to deploy the cluster"
+}
+
+variable "subnet_ids" {
+  description = "The subnet IDs into which the EC2 Instances should be deployed. You should typically pass in one subnet ID per node in the cluster_size variable. We strongly recommend that you run Vault in private subnets. At least one of var.subnet_ids or var.availability_zones must be non-empty."
+  type        = list(string)
+  default     = null
+}
