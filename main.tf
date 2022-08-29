@@ -64,7 +64,7 @@ module "vault_cluster" {
   ami_id    = var.vault_ami_id == null ? data.aws_ami.vault_consul.image_id : var.vault_ami_id
   user_data = data.template_file.user_data_vault_cluster.rendered
 
-  vpc_id     = var.vpc.id
+  vpc_id     = var.vpc_id
   subnet_ids = var.subnet_ids
 
   # Do NOT use the ELB for the ASG health check, or the ASG will assume all sealed instances are unhealthy and
