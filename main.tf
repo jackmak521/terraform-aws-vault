@@ -213,15 +213,7 @@ data "template_file" "user_data_consul" {
 # and private subnets. Only the ELB should run in the public subnets.
 # ---------------------------------------------------------------------------------------------------------------------
 
-data "aws_vpc" "default" {
-  default = var.use_default_vpc
-  tags    = var.vpc_tags
-}
 
-data "aws_subnet_ids" "default" {
-  vpc_id = data.aws_vpc.default.id
-  tags   = var.subnet_tags
-}
 
 data "aws_region" "current" {
 }
