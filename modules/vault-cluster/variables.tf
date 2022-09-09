@@ -242,3 +242,15 @@ variable "iam_permissions_boundary" {
   type        = string
   default     = null
 }
+
+variable "protect_from_scale_in" {
+  description = "If set, enable scale in protection"
+  type        = bool
+  default     = false
+}
+
+variable "suspended_processes" {
+  description = "If set, suspend termination"
+  type        = string
+  default     = null
+}

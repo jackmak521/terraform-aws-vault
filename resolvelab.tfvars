@@ -16,3 +16,6 @@ subnet_ids = ["subnet-00688962055ef2962", "subnet-0fd683d5b447378c2", "subnet-0d
 vpc_id = "vpc-0e34dd67"
 
 use_default_vpc = false
+
+protect_from_scale_in = true
+suspended_processes = ["termination"]
