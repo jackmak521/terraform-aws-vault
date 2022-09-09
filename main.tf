@@ -68,7 +68,7 @@ module "vault_cluster" {
   subnet_ids = var.subnet_ids
 
   protect_from_scale_in = var.protect_from_scale_in
-  suspended_processes = [var.suspended_processes]
+  suspended_processes = var.suspended_processes
 
   # Do NOT use the ELB for the ASG health check, or the ASG will assume all sealed instances are unhealthy and
   # repeatedly try to redeploy them.

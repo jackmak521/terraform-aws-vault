@@ -35,7 +35,7 @@ resource "aws_autoscaling_group" "autoscaling_group" {
   wait_for_capacity_timeout = var.wait_for_capacity_timeout
 
   protect_from_scale_in = var.protect_from_scale_in
-  suspended_processes = [var.suspended_processes]
+  suspended_processes = var.suspended_processes
 
 
   enabled_metrics = var.enabled_metrics
