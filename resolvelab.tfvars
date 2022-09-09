@@ -18,4 +18,4 @@ vpc_id = "vpc-0e34dd67"
 use_default_vpc = false
 
 protect_from_scale_in = true
-suspended_processes = ["termination"]
+suspended_processes = ["Terminate"]
