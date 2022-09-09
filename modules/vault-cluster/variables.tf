@@ -251,6 +251,5 @@ variable "protect_from_scale_in" {
 
 variable "suspended_processes" {
   description = "If set, suspend termination"
-  type        = string
   default     = null
 }
