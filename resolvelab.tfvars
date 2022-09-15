@@ -7,7 +7,7 @@ consul_ami_id = "ami-045aeef67e423a5f7"
 vault_instance_type = "t3.micro"
 vault_cluster_name = "test-vault"
 vault_cluster_size = 3
-vault_ami_id = "ami-0e0ef03cb74503bd9"
+vault_ami_id = "ami-09669a13c17f651ee"
 
 ssh_key_name = "welabpoc"
 
